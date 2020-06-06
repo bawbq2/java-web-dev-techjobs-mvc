@@ -12,8 +12,8 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 <!--    <th:block th:each = "job : ${jobs}">-->
+    <div th:fragment = "listAllJobs">
 <table th:block th:each = "job : ${jobs}" class = "job-listing">
-<!--    <tr th:block th:each="job : ${jobs}">-->
     <tr><td th:text="${'ID: ' + job.id}"></td></tr>
     <tr><td th:text="${'Name: ' + job.name}"></td></tr>
     <tr><td th:text="${'Employer: ' + job.employer}"></td></tr>
@@ -22,7 +22,7 @@
     <tr><td th:text="${'Skill: ' + job.coreCompetency}"></td></tr>
 </table>
     </th:block>
-
+    </div>
 </div>
 
 </body>
